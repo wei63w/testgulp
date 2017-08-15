@@ -19,8 +19,9 @@ var cssver = require('gulp-make-css-url-version'); 					//加版本号
 var jsSrc = ['js/jquery-1.9.0.min.js','js/customer.js'];
 
 
-gulp.task('default', function() {
-    gulp.start('clean','minifyjs','revCollector');
+gulp.task('default',['minifyjs','revCollector'],function() {
+//  gulp.start('clean','minifyjs','revCollector');
+    
 });
 
 gulp.task('clean', function(cb) {
@@ -39,7 +40,7 @@ gulp.task('minifyjs', function() {//ok
         .pipe(rev.manifest())                       //生成rev-mainfest.json文件作为记录
         .pipe(gulp.dest('dist/js'));  //输出
 });
-gulp.task('revCollector', function() {
+gulp.task('revCollector', ['minifyjs'],function() {
     return gulp.src(['dist/js/*.json','index.html']) //读取 rev-manifest.json 文件以及需要进行文件名替换的文件
         .pipe(revCollector({
             replaceReved: true
