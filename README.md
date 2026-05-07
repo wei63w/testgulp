@@ -1,6 +1,23 @@
 # testgulp
 
-### 通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。
-### 利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作
-### 该测试项目实现 gulp的 js,css压缩,合并,哈希重名文件,修改html引入替换,图片压缩
-### 更多功能,敬请期待
+## 项目简介
+一个基于 npm / Node.js 的前端或工具项目。
+
+## 目录
+- `css`
+- `dist`
+- `gulpfile.js`
+- `img`
+- `index.html`
+- `js`
+- `node_modules`
+- `package.json`
+- `README.md`
+
+## 快速开始
+```bash
+npm install
+```
+
+## 说明
+- 这是一个 Node.js 或 npm 项目，具体启动命令以 `package.json` 为准。
